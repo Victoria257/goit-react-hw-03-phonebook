@@ -1,0 +1,15 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  border: solid 1px rgb(98, 172, 172);
+  border-radius: 5px;
+  margin-top: 10px;
+  padding-left: 5px;
+  background-color: rgb(217, 225, 225);
+}
+
+.delButton {
+  border: solid 1px rgb(98, 172, 172);
+  border-radius: 5px;
+}
