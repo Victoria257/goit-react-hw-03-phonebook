@@ -16,6 +16,21 @@ class App extends Component {
     filter: '',
   };
 
+  componentDidMount() {
+    if (!this.state.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    } else {
+      const contactsList = JSON.parse(localStorage.getItem('contacts'));
+      contactsList && this.setState({ contacts: contactsList });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
+
   formSubmitHandler = data => {
     console.log(data);
   };
